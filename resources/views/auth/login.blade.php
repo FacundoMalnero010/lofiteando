@@ -4,12 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" width=device-width, initial-scale=1.0>
     <link rel="shortcut icon" href="{{asset('images/lofiIcon.png')}}" type="image/x-icon">
-    <link rel="stylesheet" href="{{asset('css/login.css')}}" type="text/css">
+    <!--<link rel="stylesheet" href="{{asset('css/login.css')}}" type="text/css">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>{{env('APP_NAME')}}</title>
 </head>
 
 <body>
+
+<style>
+
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+
+    #container{
+        width: 100%;
+        height: 100%;
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBFhLRAhpZ7sVBad26En2MgM4kspyjnTT4BA&usqp=CAU');
+        filter: brightness(90%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media only screen and (min-width: 700px){
+        #login{
+            background-color: rgba(83,97,212,60%);
+            border-radius: 6%;
+        }
+    }
+
+    @media only screen and (max-width: 700px){ /*Esto también*/
+        #login{
+            background-color: rgba(83,97,212,60%);
+            border-radius: 6%;
+            height: 70%;
+        }
+    }
+
+    #titulo{
+        font-size: 60px;
+        -webkit-text-stroke-color: whitesmoke;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .font{
+        font-size: 120%;
+    }
+
+    #email{
+        background-color: rgba(217, 217, 217, 0.6);
+        border: none;
+    }
+
+    #password{
+        background-color: rgba(217, 217, 217, 0.6);
+        border: none;
+    }
+
+    #ingreso{
+        background-color: rgba(217, 217, 217, 0.6);
+        border: none;
+        color: black;
+    }
+
+    #ingreso:hover{
+        background-color: rgba(65, 65, 65, 0.6);
+        color: azure;
+        transition: 0.75s ease-in-out;
+    }
+
+    .link{
+        text-decoration: none;
+        color: black;
+    }
+
+    .link:hover{
+        text-decoration: none;
+        color: white;
+    }
+
+
+</style>
+
 <div id="container">
     <section class="col-10 col-sm-8 col-md-6 col-lg-4 col-xl-3" id="login">
         <div class="row justify-content-center">
