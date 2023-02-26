@@ -27,7 +27,7 @@
     #container{
         width: 100%;
         height: 100%;
-        background-image: url("asset{{'images/fondo.jpeg'}}");
+        background-image: url('https://i.blogs.es/0b4932/maxresdefault/1366_2000.jpg');
         filter: brightness(70%);
         background-size: cover;
         background-position: center;
