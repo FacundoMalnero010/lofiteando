@@ -6,13 +6,169 @@
     <title>Lofiteando</title>
     <link rel="shortcut icon" href="{{asset('images/lofiIcon.png')}}" type="image">
     <link href='https://fonts.googleapis.com/css?family=Akaya Kanadaka' rel='stylesheet'>
-    <link rel="stylesheet" href={{asset('css/principal.css')}}>
+    <!--<link rel="stylesheet" href={{asset('css/principal.css')}}>-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src={{asset('js/principal.js')}}></script>
 </head>
 <body onload="reloj()">
+
+<style>
+
+    html, body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    @media (max-width: 1024px) {
+        #video{
+            position: absolute;
+            z-index: -1;
+            background-position: center;
+            height: 100%;
+        }
+    }
+
+    @media (min-width: 1024px){
+        video{
+            position: absolute;
+            z-index: -1;
+            background-position: center;
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 1280px){
+        video{
+            position: absolute;
+            z-index: -1;
+            background-position: center;
+            width: 100%;
+            transform: translateY(-70px);
+        }
+    }
+
+    #cerrarCrono{
+        width: 15%;
+        visibility: hidden;
+    }
+
+    #imagenCrono{
+        opacity: 0.75;
+        height: 60%;
+    }
+
+    #numeroReloj{
+        font-size: 50px;
+        -webkit-text-stroke: 1.5px black;
+    }
+
+    #relojYCrono{
+        color: white;
+    }
+
+    #numeroCrono{
+        font-size: 200%;
+        visibility: hidden;
+        -webkit-text-stroke: 0.8px black;
+    }
+
+    #botonCrono{
+        visibility: hidden;
+    }
+
+    #fondoPantalla{
+        width: 50px;
+        height: 25px;
+        filter: opacity(0.6);
+    }
+
+    #botonLogout{
+        filter: opacity(0.75);
+    }
+
+    #to-do-list{
+        margin-top: 3%;
+        margin-right: 25%;
+        border-radius: 6%;
+        background-color: rgba(83,97,212,65%);
+        height: 60%;
+    }
+
+    .renglon{
+        height: 6%;
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 2.5px dotted #171A1E;
+        font-size: large;
+        font-weight: bold;
+        font-family: Candara;
+    }
+
+    .completos{
+        margin-left: 5%;
+    }
+
+    .boton{
+        background-color: rgba(217, 217, 217, 0.6);
+        border: none;
+        color: black;
+        border-radius: 5%;
+        text-decoration: none;
+        width: 16%;
+        height: 6%;
+        text-align: center;
+    }
+
+    .boton:hover{
+        background-color: rgba(65, 65, 65, 0.6);
+        color: azure;
+        transition: 0.75s ease-in-out;
+    }
+
+    #tituloToDoList{
+        -webkit-text-stroke-color: whitesmoke;
+        -webkit-text-stroke-width: 1px;
+        font-weight: bold;
+        font-size: xx-large;
+    }
+
+    .bbdd{
+        color: whitesmoke;
+    }
+
+    .contenedorTareas{
+        height: 14%;
+    }
+
+    #contenedorRenglon{
+        height: 13%;
+    }
+
+    .confirmarEdicion{
+        height: 60%;
+    }
+
+    #contenedorSpotify{
+        height: 8%;
+        margin-top: 2%;
+    }
+
+    #reproductorSpotify{
+        filter: opacity(0.75);
+
+    }
+
+    #videoLofi{
+        margin-top: 5%;
+    }
+
+
+</style>
+
 <video src="{{asset('videos/videoDia.mp4')}}" id="video" autoplay loop muted type="video/mp4"></video>
 <div id="container" class="d-flex w-100">
     <div id="relojYCrono" class="row w-1oo d-flex justify-content-center align-items-center offset-1">
