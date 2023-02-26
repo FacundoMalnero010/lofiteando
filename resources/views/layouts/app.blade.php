@@ -27,7 +27,7 @@
     #container{
         width: 100%;
         height: 100%;
-        background-image: url('../../../public/images/fondo.jpeg');
+        background-image: url("asset{{'images/fondo.jpeg'}}");
         filter: brightness(70%);
         background-size: cover;
         background-position: center;
