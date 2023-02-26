@@ -21,7 +21,7 @@
     #container{
         width: 100%;
         height: 100%;
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBFhLRAhpZ7sVBad26En2MgM4kspyjnTT4BA&usqp=CAU');
+        background-image: url('https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2022/09/15/04964401-037d-434c-88d4-765f2e8ddd1f_5b91181c.jpg');
         filter: brightness(90%);
         background-position: center;
         background-repeat: no-repeat;
