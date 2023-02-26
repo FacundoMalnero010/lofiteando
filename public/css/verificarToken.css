@@ -1,0 +1,21 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#fondo{
+    background-image: url('../images/fondo_reset_password.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#containerForm{
+    background-color: rgba(161, 168, 232, 0.7);
+    border-radius: 8%;
+}
+
+#token{
+    background-color: darkgrey;
+    filter: opacity(0.8);
+}
